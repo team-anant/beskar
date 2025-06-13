@@ -1,6 +1,6 @@
-SUMMARY = "A robust radiation hardened image"
+SUMMARY = "This is an image used for development and testing of extensible schedulers"
 
-IMAGE_INSTALL = "packagegroup-core-boot"
+IMAGE_INSTALL = "packagegroup-core-boot clang"
 
 IMAGE_LINGUAS = " "
 

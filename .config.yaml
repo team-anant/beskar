@@ -1,6 +1,6 @@
 header:
   version: 11
-machine: beaglebone
+machine: qemuarm
 distro: beskar
 target:
   - whistling-bird
@@ -8,6 +8,9 @@ repos:
   meta-beskar:
     layers:
       meta-beskar:
+  meta-clang:
+    url: "https://github.com/kraj/meta-clang.git"
+    branch: "walnascar"
 
   openembedded-core:
     url: "https://github.com/openembedded/openembedded-core.git"
@@ -25,13 +28,8 @@ repos:
     layers:
       meta-arm-toolchain:
       meta-arm:
-  meta-ti:
-    url: "https://git.yoctoproject.org/meta-ti"
-    branch: master
-    layers:
-      meta-ti-bsp:
-      meta-beagle:
 local_conf_header:
-  meta-kiss: |
+  meta-beskar: |
     # INHERIT += "rm_work"
     # EXTRA_IMAGE_FEATURES = "debug-tweaks"
+    MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS += "kernel-modules"
