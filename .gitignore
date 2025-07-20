@@ -3,5 +3,6 @@ bitbake/
 build/
 meta-arm/
 meta-ti/
+meta-openembedded/
 openembedded-core/
 .kas_shell_history

@@ -17,11 +17,16 @@ repos:
     branch: "walnascar"
     layers:
       meta:
+  meta-openembedded:
+    url: "https://github.com/openembedded/meta-openembedded.git"
+    branch: "walnascar"
+    layers:
+      meta-oe:
   bitbake:
     url: "https://github.com/openembedded/bitbake.git"
     branch: "2.12"
     layers:
-      .: excluded
+      .: disabled
   meta-arm:
     url: "https://git.yoctoproject.org/meta-arm"
     branch: "walnascar"
@@ -33,3 +38,4 @@ local_conf_header:
     # INHERIT += "rm_work"
     # EXTRA_IMAGE_FEATURES = "debug-tweaks"
     MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS += "kernel-modules"
+    CLANGSDK = "1"
