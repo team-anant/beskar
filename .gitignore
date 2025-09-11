@@ -4,4 +4,6 @@ build/
 meta-arm/
 meta-ti/
 openembedded-core/
+meta-openembedded/
+local-env.sh
 .kas_shell_history
